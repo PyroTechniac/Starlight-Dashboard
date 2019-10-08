@@ -1,0 +1,34 @@
+{
+    "prefix": {
+        "array": false,
+        "configurable": true,
+        "default": "s!",
+        "max": null,
+        "min": null,
+        "type": "string"
+    },
+    "language": {
+        "array": false,
+        "configurable": true,
+        "default": "en-US",
+        "max": null,
+        "min": null,
+        "type": "language"
+    },
+    "disableNaturalPrefix": {
+        "array": false,
+        "configurable": false,
+        "default": false,
+        "max": null,
+        "min": null,
+        "type": "boolean"
+    },
+    "disabledCommands": {
+        "array": true,
+        "configurable": true,
+        "default": [],
+        "max": null,
+        "min": null,
+        "type": "command"
+    }
+}

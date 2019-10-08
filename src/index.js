@@ -1,10 +1,20 @@
-import React from 'react';
+import React, { setGlobal } from 'reactn';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+import * as serviceWorker from './serviceWorker';
+import { loadState } from 'meta/util';
+import Root from 'components/Root';
+
+const discordUser = loadState('discord_user');
+const discordToken = loadState('discord_token');
+
+setGlobal({
+    authenticated: !!discordToken && !!discordUser,
+    user: discordUser,
+    token: discordToken
+});
+
+ReactDOM.render(<Root />, document.getElementById('root'));
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
